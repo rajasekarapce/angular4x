@@ -1,0 +1,27 @@
+<div *ngIf="isPremiumUser()">
+  Premium features accessible
+</div>
+
+<div *ngIf="!isPremiumUser()">
+  Basic Premium features accessible! please subscribe for accessing premium control
+</div>
+
+<ul>
+  <li *ngFor="let pgm of programList"> {{pgm}}</li>
+</ul>
+
+<button (click)="value=1">select - 1</button>
+<button (click)="value=2">select - 2</button>
+<button (click)="value=3">select - 3</button>
+<h5>You selected : {{value}}</h5>
+
+<div [ngSwitch]="value">
+  <div *ngSwitchCase="1">1. Template - <b>{{value}}</b> </div>
+  <div *ngSwitchCase="2">2. Template - <b>{{value}}</b> </div>
+  <div *ngSwitchCase="3">3. Template - <b>{{value}}</b> </div>
+  <div *ngSwitchDefault>Default Template</div>
+</div>
+
+<p>The hero's birthday is {{ birthday | date: 'yyyy/MMM/dd' }}</p>
+
+<p>{{ lorem | ellipsis }}</p>

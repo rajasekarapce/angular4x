@@ -1,0 +1,32 @@
+<p>
+  contacts works!
+</p>
+<p>
+  Sometime you have got to RUN before you walk. Shasta can take you through the IT transformation journey of either of the strategies.
+</p>
+<a routerLink="/">Go Home</a>
+<p>
+  <button (click)="gohome()">Go To Home</button>
+</p>
+<!--
+<p>
+  <button (click)="addcontact()">add contact</button>
+</p>
+<p>
+  <button (click)="contactdetails()">contact details</button>
+</p>
+-->
+
+<div class="container">
+  <div class="row " *ngFor="let contactuser of contactList">
+    <div class="col-md-12"><h1>View All Contacts <a  class="btn btn-primary" routerLink="/new">Add Contact</a></h1></div>
+    <div class="card col-md-4">
+      <div class="card-body">
+        <h5 class="card-title">{{contactuser.id}} . {{contactuser.username}} </h5>
+        <p class="card-text">{{contactuser.email}}.</p>
+        <p class="card-text">{{contactuser.phone}}.</p>
+        <a routerLink="/{{contactuser.contactId}}" class="link">View Details</a> 
+      </div>
+    </div>
+  </div>
+</div>

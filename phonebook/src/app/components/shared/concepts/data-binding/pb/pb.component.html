@@ -1,0 +1,11 @@
+<p>
+ {{pname}}
+</p>
+<p>
+  <input type="text" value="{{pname}}"><!--string intgerpolation-->
+</p>
+<p>
+  <input type="text" [value]="pname"> <!--property interpolation--->
+</p>
+
+<div [ngClass]="{redText: !isAllowed(), greenText: isAllowed() }">Css Class Calling</div>
